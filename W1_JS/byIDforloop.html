@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+ </head>   
+<body>
+
+<h2>For loop to generate item list.</h2>
+<ul id="ID1"></ul>
+
+<script>
+ //Items as:" <li>Item1</li> <li>Item2</li>";
+ var i, ret;
+ ret = "";
+ for(i=1;i<=10;i++)
+   {ret = ret + "<li>Item";
+    ret = ret + i;
+	ret = ret + "</li>";
+   }
+ document.getElementById("ID1").innerHTML =  ret;
+ </script>
+
+</body>
+</html>

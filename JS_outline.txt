@@ -1,0 +1,8 @@
+﻿變數與運算子(operator)
+條件判斷: if
+迴圈: for, while
+函式(function)
+物件(object)
+事件(event)
+JSON 
+AJAX HTTP
