@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+      
+<body>
+   <table id="t1"> </table> 
+    <button type="button" onclick='displayDate()'>点击我！</button>
+ </body>
+ <script>
+        var photoLabels = ["花東縱谷 Hualien and Taitung Longitudinal Valley",
+                           "七星潭 Seven Star Lake",
+                           "壽豐花海 Shou-feng",
+                           "秀林 Hsiulin",
+                           "花蓮漁港鳥踏石廣場 Fishing Port of Hualien",
+                            "砂婆噹溪 When the Great Sand Creek" 
+                        ];
+        var photoArray = ["images/1.jpg",
+                          "images/2.jpg",
+                          "images/3.jpg",
+                          "images/4.jpg",
+                          "images/5.jpg",
+                          "images/6.jpg",
+                          "images/7.jpg",
+                          "images/8.jpg",
+                          "images/9.jpg"
+                        ];                       
+       // document.getElementById("p1").innerHTML =  photoLabels[1];                    
+       var retStr =""; 
+       var offset = 0;
+       for(i=0; i<2; i++) {
+            var trStr = "<tr><td><img src='";
+            trStr = trStr  +  photoArray[i + offset]; 
+            trStr = trStr  +  "' width='200' height='150'/><br/>";
+            trStr = trStr  +  photoLabels[i + offset]; 
+            trStr = trStr  + "</td></tr>";
+           // alert(trStr);
+            retStr = retStr + trStr;
+         } 
+         //alert(retStr);
+         document.getElementById("t1").innerHTML = retStr;
+
+         function displayDate() { 
+            retStr ="";
+
+            if(offset <photoArray.length-2 ) { offset = offset +1;}
+           
+            for(i=0; i<2; i++) {
+            var trStr = "<tr><td><img src='";
+            trStr = trStr  +  photoArray[i + offset]; 
+            trStr = trStr  +  "' width='200' height='150'/><br/>";
+            trStr = trStr  +  photoLabels[i + offset]; 
+            trStr = trStr  + "</td></tr>";
+           // alert(trStr);
+            retStr = retStr + trStr;
+         } 
+         //alert(retStr);
+         document.getElementById("t1").innerHTML = retStr; 
+          //  alert(offset);
+         }
+ 
+       
+ </script>  
+
+</html>
