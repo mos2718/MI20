@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>成績計算作業</title>
+</head>
+<body>
+    
+<h2>成績計算作業: 將成績資料套到 HTML table 當中 </h2>
+<h3>套表呈現應用需求非常多，如成績單、商品訂單、醫護量表等 </h3>
+<h3>常見的處理流程 </h3>
+<ol>
+  <li>將 Excel 資料轉換成套表程式易於處理的格式，如 JS array,JSON, XML 等格式(資料轉換也須寫程式,以後會教)。</li>
+  <li>套表程式引入標準格式資料 (可暫用 JS arryy的模式, 未來程式將直接從伺服器下載資料)。</li>
+  <li>使用迴圈將資料套到 HTML table, 迴圈內包含成績計算公式及判斷邏輯(如判斷是否及格,或將百分比成績轉換成等第成績)</li>
+ </ol>  
+<br />
+
+<h2>作業要求 </h2>
+<h3>某課程同學的成績如下表: </h3> 
+<img src="grade.JPG" width= "800" high = "300" />
+<br/><br/>
+<h3>初步成績統計結果:</h3> 
+<img src="HTMLret1.JPG"  width= "800" high = "300"  />
+<br/>
+上列成績計算方式: 5次作業佔 40%,  期中考 30%, 期末考 30 %
+<a href="gradeToTable.html">產生統計結果的網頁程式</a>，程式中包含<a href="Grade.js">JS 二維陣列(Grade.js)成績資料 </a>  <br/>
+
+<br/><br/>
+由於有多位同學成績不及格，所以好心的老師讓不及格的同學補考期末考<br/>
+<h3>合併期末補考的成績如下表: </h3> 
+<img src="grade2.JPG" width= "800" high = "300" />
+<br/>
+其轉換後之<a href="Grade2.js">JS 陣列(Grade2.js)成績資料 </a>  <br/>
+因此,我們需要修改上述產生統計結果的網頁程式,以產生新的統計結果,如下.
+<h3>最後成績統計結果:</h3>
+<img src="HTMLret2.JPG"  width= "800" high = "300"  />
+<br/>
+請大家修改原來成績計算程式範例,產生如上之最後成績統計結果. 
+<br/>
+註: 成績計算方式不變(5次作業佔 40%,  期中考 30%, 期末佔 30 %), 但期末補考與期末考採計較高的分數. 
+<br/>
+<h3>作業繳交方式 </h3> 
+若使用 zip 壓縮上傳修改之程式，繳交前，記得 grede2.js 檔需與設計之網頁一起壓縮上傳.
+<br/>
+也可挑戰將修改之網頁程式及 grede2.js 檔發佈到網站, 如 github 網站. 
+這樣就僅需在學習平台作業繳交區, 貼上成果網址連結即可.
+</body>
+</html>
