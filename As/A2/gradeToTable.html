@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ <title></title>
+  
+ <style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<script src="Grade.js"></script>
+
+</head>
+<body>
+ <table id = "t1"   />
+       
+
+</body>
+  <script>
+   var i,j;
+   // 同學總人數 4
+   // alert(grade108.length);
+   // 第一列有 9 筆資料
+   // alert(grade108[0].length);
+  // var tableStr = "";
+  var tableStr = "<tr> <th >姓名</th><th>學號</th><th>作業 1</th><th>作業 2</th><th>作業 3</th><th>作業 4</th><th>作業 5</th><th>期中考</th><th>期末考</th><th>總成績</th</tr>";
+   for(i=0;i<4;i++ )
+    {   //alert(grade108[0][i]);  
+    var trStr = "";	
+	var trStr = "<tr>";
+	for(j=0;j<9;j++ )
+	   {trStr = trStr + "<td>";
+	    trStr = trStr + grade108[i][j]; 
+	    trStr = trStr + "</td>"; 
+		}
+	var ret;
+	ret = (grade108[i][2] + grade108[i][3] + grade108[i][4] +grade108[i][5] +grade108[i][6] ) *0.4/5;  // *0.08;
+	//alert(ret);
+	ret = ret + grade108[i][7] * 0.3 + grade108[i][8] * 0.3 ;  
+	trStr = trStr + "<td>";
+	trStr = trStr + ret; 
+	trStr = trStr + "</td>"; 
+    trStr = trStr + "</tr>";
+	tableStr = tableStr + trStr;
+	}
+    document.getElementById("t1").innerHTML = tableStr;
+    </script>
+</html>
