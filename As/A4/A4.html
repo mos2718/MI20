@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>楊貴妃之個人健康紀錄首頁</title>
+</head>
+<body>
+人生無常，狀況不斷。請依據個人(或親友)健康狀況，在 FHIR server上創建一份個人健康紀錄， FHIR server 連結:
+
+手動上傳入口: http://hapi.fhir.org
+程式 API 基底: http://hapi.fhir.org/baseR4
+可手動或使用程式創建一個病人基本資料(FHIR patient)、病人所屬量測資訊( FHIR observation)、及其健康狀況(FHIR condition)，其範例如下:
+
+https://www.hl7.org/fhir/patient-examples.html
+https://www.hl7.org/fhir/observation-examples.html
+https://www.hl7.org/fhir/condition-examples.html
+https://www.hl7.org/fhir/valueset-condition-code.html
+上傳 FHIR resources 到 server 過程，須注意其參考關係，如 observation.subject、condition.subject 參考到 patient 因此需先在 FHIR server 上創建病人基本資料。創建後，需將資料連結貼到 HTML 網頁當中，如下範例連結:
+
+https://mos2718.github.io/MI20/As/A4/A4Exp.html
+以利後續就醫時，可匯入醫院資訊系統，方便醫護人員快速了解你(或你的親友)之身體健康狀況。
+
+</body>
+</html>
